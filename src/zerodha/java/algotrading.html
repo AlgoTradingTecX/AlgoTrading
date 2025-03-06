@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Algo Trading - Zerodha Publisher</title>
+    <script type="text/javascript" src="https://kite.trade/publisher.js"></script>
+</head>
+<body>
+
+    <h2>Automated Algo Trading</h2>
+
+    <label for="symbol">Stock Symbol:</label>
+    <input type="text" id="symbol" placeholder="e.g. INFY">
+
+    <label for="transaction">Transaction Type:</label>
+    <select id="transaction">
+        <option value="BUY">BUY</option>
+        <option value="SELL">SELL</option>
+    </select>
+
+    <label for="interval">Trade Interval (seconds):</label>
+    <input type="number" id="interval" value="60">
+
+    <button onclick="startAutoTrade()">Start Auto Trade</button>
+    <button onclick="stopAutoTrade()">Stop Auto Trade</button>
+
+    <h3>Status: <span id="status">Stopped</span></h3>
+
+    <script>
+        let tradeInterval;
+        
+        function placeOrder() {
+            let symbol = document.getElementById("symbol").value.toUpperCase();
+            let transactionType = document.getElementById("transaction").value;
+
+            if (!symbol) {
+                alert("Please enter a stock symbol.");
+                return;
+            }
+
+            let url = `https://kite.trade/connect/basket?items=[{
+                "exchange":"NSE",
+                "tradingsymbol":"${symbol}",
+                "transaction_type":"${transactionType}",
+                "quantity":1,
+                "order_type":"MARKET"
+            }]`;
+
+            window.open(url, "_blank");
+        }
+
+        function startAutoTrade() {
+            let interval = parseInt(document.getElementById("interval").value) * 1000;
+            if (tradeInterval) {
+                alert("Auto Trading is already running!");
+                return;
+            }
+
+            tradeInterval = setInterval(placeOrder, interval);
+            document.getElementById("status").innerText = "Running";
+        }
+
+        function stopAutoTrade() {
+            clearInterval(tradeInterval);
+            tradeInterval = null;
+            document.getElementById("status").innerText = "Stopped";
+        }
+    </script>
+
+</body>
+</html>
