@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerodha Kite Publisher Algo Trading</title>
+    <script type="text/javascript" src="https://kite.trade/publisher.js"></script>
+</head>
+<body>
+
+    <h2>Trade with Zerodha Kite Publisher</h2>
+
+    <!-- Static Buy & Sell Buttons -->
+    <h3>Single Order Buttons</h3>
+    <a href="https://kite.trade/connect/basket?items=[{%22exchange%22:%22NSE%22,%22tradingsymbol%22:%22RELIANCE%22,%22transaction_type%22:%22BUY%22,%22quantity%22:1,%22order_type%22:%22MARKET%22}]" target="_blank">
+        <button>Buy RELIANCE</button>
+    </a>
+
+    <a href="https://kite.trade/connect/basket?items=[{%22exchange%22:%22NSE%22,%22tradingsymbol%22:%22RELIANCE%22,%22transaction_type%22:%22SELL%22,%22quantity%22:1,%22order_type%22:%22MARKET%22}]" target="_blank">
+        <button>Sell RELIANCE</button>
+    </a>
+
+    <!-- Basket Orders -->
+    <h3>Basket Orders</h3>
+    <a href="https://kite.trade/connect/basket?items=[
+        {%22exchange%22:%22NSE%22,%22tradingsymbol%22:%22INFY%22,%22transaction_type%22:%22BUY%22,%22quantity%22:1,%22order_type%22:%22MARKET%22},
+        {%22exchange%22:%22NSE%22,%22tradingsymbol%22:%22TCS%22,%22transaction_type%22:%22BUY%22,%22quantity%22:1,%22order_type%22:%22MARKET%22}
+    ]" target="_blank">
+        <button>Buy INFY & TCS</button>
+    </a>
+
+    <!-- Dynamic Order Placement -->
+    <h3>Dynamic Order Placement</h3>
+    <label for="symbol">Stock Symbol:</label>
+    <input type="text" id="symbol" placeholder="e.g. INFY">
+
+    <label for="transaction">Transaction Type:</label>
+    <select id="transaction">
+        <option value="BUY">BUY</option>
+        <option value="SELL">SELL</option>
+    </select>
+
+    <button onclick="placeOrder()">Place Order</button>
+
+    <script>
+        function placeOrder() {
+            let symbol = document.getElementById("symbol").value.toUpperCase();
+            let transactionType = document.getElementById("transaction").value;
+
+            if (!symbol) {
+                alert("Please enter a stock symbol.");
+                return;
+            }
+
+            let url = `https://kite.trade/connect/basket?items=[{
+                "exchange":"NSE",
+                "tradingsymbol":"${symbol}",
+                "transaction_type":"${transactionType}",
+                "quantity":1,
+                "order_type":"MARKET"
+            }]`;
+
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
+
