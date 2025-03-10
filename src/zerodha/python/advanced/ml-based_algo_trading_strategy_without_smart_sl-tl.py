@@ -72,25 +72,6 @@ def place_order(symbol, transaction_type, quantity=1):
     )
     print(f"Order placed: {transaction_type} {symbol}")
     
-def place_order(symbol, transaction_type, quantity=1):
-    last_price = kite.ltp(f"NSE:{symbol}")[f"NSE:{symbol}"]["last_price"]
-    stop_loss = round(last_price * 0.98, 2)  # 2% Stop Loss
-    target_price = round(last_price * 1.05, 2)  # 5% Profit Target
-
-    order_id = kite.place_order(
-        variety="regular",
-        exchange="NSE",
-        tradingsymbol=symbol,
-        transaction_type=transaction_type,
-        quantity=quantity,
-        order_type="LIMIT",
-        price=last_price,
-        stoploss=stop_loss,
-        squareoff=target_price,
-        product="MIS"
-    )
-    print(f"Order placed: {transaction_type} {symbol} at {last_price} with SL {stop_loss}")
-
 # Run every 5 minutes
 while True:
     ml_trading_strategy("INFY")
