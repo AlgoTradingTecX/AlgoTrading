@@ -1,8 +1,8 @@
 import os
 from kiteconnect import KiteConnect
 
-API_KEY = "your_api_key"
-API_SECRET = "your_api_secret"
+API_KEY = ""
+API_SECRET = ""
 
 def get_access_token():
     if os.path.exists("access_token.txt"):
