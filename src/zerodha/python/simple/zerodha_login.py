@@ -1,8 +1,8 @@
 from kiteconnect import KiteConnect
 
-API_KEY = "your_api_key"
-API_SECRET = "your_api_secret"
-REQUEST_TOKEN = "your_request_token"  # Copy from the redirected URL
+API_KEY = ""
+API_SECRET = ""
+REQUEST_TOKEN = ""  # Copy from the redirected URL
 
 kite = KiteConnect(api_key=API_KEY)
 
