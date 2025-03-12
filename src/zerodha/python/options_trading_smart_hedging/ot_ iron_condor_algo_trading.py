@@ -16,7 +16,7 @@ def get_atm_strike(symbol):
 # Iron Condor Strategy
 def iron_condor(symbol):
     strike = get_atm_strike(symbol)
-    expiry = "2024-03-28"  # Modify for next expiry
+    expiry = "2025-03-28"  # Modify for next expiry
 
     # Sell ATM Call & Put
     sell_call = f"{symbol}{expiry}{strike}CE"
