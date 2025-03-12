@@ -9,3 +9,5 @@ pip install stable-baselines3 gym numpy pandas
 pip install transformers torch nltk tweepy vaderSentiment
 pip install numpy pandas scikit-learn tensorflow keras cvxpy scipy matplotlib
 pip install numpy pandas tensorflow scikit-learn matplotlib pyod
+chmod +x /src/zerodha/python/simple/deploy.sh
+src/zerodha/python/simple/deploy.sh
