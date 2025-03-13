@@ -1,4 +1,4 @@
-/simple
-/advanced
-/advanced_ai_strategies
-/option_
+./simple
+./advanced
+./advanced_ai_strategies
+./options_trading_smart_hedging
