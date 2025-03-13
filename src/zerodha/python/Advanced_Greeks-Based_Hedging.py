@@ -9,8 +9,8 @@ Step 2: Implement Delta Hedging Strategy
 Delta measures how much an option price moves when the stock moves by ₹1.
 //*
 
-Calculate Delta & Hedge with Futures
-python
+#Calculate Delta & Hedge with Futures
+
 import numpy as np
 from kiteconnect import KiteConnect
 
