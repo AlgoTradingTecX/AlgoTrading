@@ -24,4 +24,4 @@ def smart_stop_loss(current_price):
 current_price = 22500
 print(f"Smart Stop Loss: {smart_stop_loss(current_price)}")
 
-✅ Dynamically adjusts stop-loss based on market volatility.
+# Dynamically adjusts stop-loss based on market volatility.
