@@ -5,7 +5,7 @@ cd ../options_trading_smart_hedging
 cd ../
 cd ../
 cd ../reinforcement_learning_for_automated_trade_execution
-cd ../
+cd ../smart_stop_loss_ai-based_risk_management_for_algo_trading
 cd ../
 cd ../
 cd ../
