@@ -13,7 +13,7 @@ cd ../ai-based_predictive_analytics_for_price_forecasting
 cd ../advanced_ai_for_market_anomaly_detection
 cd ../advanced_ai_for_hedging_and_portfolio_optimization
 cd ../reinforcement_learning_for_ai-based_strategy_adaptation
-cd ../
+cd ../deep_reinforcement_learning_for_ai-based_strategy_adaptation
 cd ../
 cd ../
 cd ../
