@@ -11,7 +11,7 @@ cd ../reinforcement_learning_for_ai-based_strategy_adaptation
 cd ../ai-based_sentiment_analysis_for_market_prediction
 cd ../ai-based_predictive_analytics_for_price_forecasting
 cd ../advanced_ai_for_market_anomaly_detection
-cd ../
+cd ../advanced_ai_for_hedging_and_portfolio_optimization
 cd ../
 cd ../
 cd ../
