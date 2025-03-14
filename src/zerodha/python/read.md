@@ -7,7 +7,7 @@ cd ../ai-powered_dynamic_strategy_optimization_for_algo_trading
 cd ../reinforcement_learning_for_automated_trade_execution
 cd ../smart_stop_loss_ai-based_risk_management_for_algo_trading
 cd ../ai-powered_hedging_and_portfolio_optimization_for_algo_trading
-cd ../
+cd ../reinforcement_learning_for_ai-based_strategy_adaptation
 cd ../
 cd ../
 cd ../
