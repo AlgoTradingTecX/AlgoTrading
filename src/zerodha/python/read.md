@@ -9,7 +9,7 @@ cd ../smart_stop_loss_ai-based_risk_management_for_algo_trading
 cd ../ai-powered_hedging_and_portfolio_optimization_for_algo_trading
 cd ../reinforcement_learning_for_ai-based_strategy_adaptation
 cd ../ai-based_sentiment_analysis_for_market_prediction
-cd ../
+cd ../ai-based_predictive_analytics_for_price_forecasting
 cd ../
 cd ../
 cd ../
