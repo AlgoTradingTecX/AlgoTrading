@@ -5,7 +5,7 @@ Step 1: AI Sentiment Analysis on Market Data
 '''
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import
+import collect_twitter_sentiment_data
 import 
 
 analyzer = SentimentIntensityAnalyzer()
