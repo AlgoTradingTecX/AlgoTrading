@@ -3,4 +3,4 @@
 
 pip install stable-baselines3 gym numpy pandas tensorflow
 crontab -e
-0 9 * * 1-5 nohup python3 rl_adaptive_trading.py > output.log 2>&1 &
+0 9 * * 1-5 nohup python3 deploy_rl-based_adaptive_trading.py > deploy_rl-based_adaptive_trading_output.log 2>&1 &
