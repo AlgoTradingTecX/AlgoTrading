@@ -2,9 +2,9 @@ Step 3: AI-Based Sentiment-Driven Trade Execution
  Now, we’ll use sentiment analysis to make trading decisions.
   Execute AI-Based Trading Based on Sentiment
 '''
+import fetch_twitter_sentiment_data as ftsd
 import
-import
-import
+
 
 def sentiment_based_trading():
     news_sentiment = get_news_sentiment()
