@@ -2,7 +2,7 @@ cd ./simple
 cd ../advanced
 cd ../advanced_ai_strategies
 cd ../options_trading_smart_hedging
-cd ../
+cd ../Advanced_Greeks-Based_Hedging
 cd ../
 cd ../reinforcement_learning_for_automated_trade_execution
 cd ../smart_stop_loss_ai-based_risk_management_for_algo_trading
