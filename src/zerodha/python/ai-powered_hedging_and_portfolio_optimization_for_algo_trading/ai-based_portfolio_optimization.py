@@ -11,6 +11,9 @@ We’ll use Mean-Variance Optimization (MVO) & AI to optimize portfolio allocati
 '''
 
 import numpy as np
+import pandas as pd
+from scipy.optimize import minimize
+
 
 # Get Option Greeks (Replace with API Data)
 def get_option_greeks(symbol, strike, expiry, option_type):
@@ -38,4 +41,31 @@ ai_delta_hedging("NIFTY")
 # Automatically adjusts hedge positions based on market risk.
 
 ####
+
+# Load Historical Returns (Replace with Live Data)
+returns = pd.read_csv("portfolio_returns.csv")
+
+# Portfolio Optimization Function
+def optimize_portfolio(returns):
+    num_assets = returns.shape[1]
+    
+    def portfolio_volatility(weights):
+        return np.sqrt(np.dot(weights.T, np.cov(returns.T)).dot(weights))
+
+    # Constraints: Sum of weights = 1
+    constraints = {"type": "eq", "fun": lambda weights: np.sum(weights) - 1}
+    bounds = [(0, 1) for _ in range(num_assets)]
+    
+    # Initial Weights
+    init_guess = [1/num_assets] * num_assets
+    optimized = minimize(portfolio_volatility, init_guess, bounds=bounds, constraints=constraints)
+    
+    return optimized.x  # Optimized weights
+
+# Get Optimized Portfolio Weights
+weights = optimize_portfolio(returns)
+print(f"Optimized Portfolio Allocation: {weights}")
+
+# Ensures optimal allocation across assets for risk-adjusted returns.
+
 ###
