@@ -67,8 +67,8 @@ def optimize_portfolio(returns):
     return optimized.x  # Optimized weights
 
 # Get Optimized Portfolio Weights
-weights = optimize_portfolio(returns)
-print(f"Optimized Portfolio Allocation: {weights}")
+#weights = optimize_portfolio(returns)
+#print(f"Optimized Portfolio Allocation: {weights}")
 
 # Ensures optimal allocation across assets for risk-adjusted returns.
 
