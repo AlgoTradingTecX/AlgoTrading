@@ -3,7 +3,7 @@ Step 1: Load & Prepare Portfolio Data
  We’ll preprocess historical stock & options data for AI-based optimization.
   Load Portfolio Data
 
-Step 3: AI-Based Hedging Strategy (Options & Futures)
+Step 2: AI-Based Hedging Strategy (Options & Futures)
  We’ll use AI to hedge against portfolio risk.
   Calculate Portfolio Risk Exposure (Beta)
 
