@@ -3,7 +3,7 @@ Step 3: AI-Based Sentiment-Driven Trade Execution
   Execute AI-Based Trading Based on Sentiment
 '''
 import fetch_twitter_sentiment_data as ftsd
-import
+import fetch_news_sentiment_data as fnsd
 
 
 def sentiment_based_trading():
