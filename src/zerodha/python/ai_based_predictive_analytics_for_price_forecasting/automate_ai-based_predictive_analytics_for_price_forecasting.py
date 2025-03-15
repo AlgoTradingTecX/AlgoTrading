@@ -10,7 +10,7 @@ Step 2: Build AI Price Prediction Model
 Step 3: Predict Future Prices Using AI
  We’ll use the trained LSTM model to predict future prices.
   Load Model & Predict
-Step 5: AI-Based Trading Strategy Using Price Predictions
+Step 4: AI-Based Trading Strategy Using Price Predictions
  The AI model will buy or sell based on predicted price trends.
 '''
 
