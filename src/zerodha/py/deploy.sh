@@ -1,7 +1,9 @@
 chmod +x zerodha_login_Automate.py
 python3 zerodha_login_Automate.py
 chmod +x algo_trading.py
-./Token_Generate_Request-Manual_Step.perl
+chmod +x /Token_Request.perl
+./Token_Request.perl
+/Token_Request.perl
 crontab -e
 18 9 * * 1-5 pkill -f algo_trading.py && nohup python3 /workspace/AlgoTrading/src/zerodha/py/algo_trading.py > /workspace/AlgoTrading/src/zerodha/py/output.log 2>&1 &
 ps aux | grep algo_trading.py
