@@ -59,12 +59,14 @@ def rsi_trading_strategy(symbol):
     if latest_rsi < 30:
         print("Oversold! Buying.../nlets predict future")
         if predicted_price > today_price:
-           place_order("NIFTY", "BUY", 50)
+           place_order("NIFTY", "BUY", 1)
+            # place_order("NIFTY", "BUY", 50)
      # place_order(symbol, "BUY")
     elif latest_rsi > 70:
         print("Overbought! Selling...")
         if predicted_price < today_price:
-           place_order("NIFTY", "SELL", 50)
+           place_order("NIFTY", "SELL", 1)
+            # place_order("NIFTY", "SELL", 50)
        # place_order(symbol, "SELL")
 
 while True:
