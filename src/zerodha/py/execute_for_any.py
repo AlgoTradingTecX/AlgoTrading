@@ -112,7 +112,7 @@ def ai_trading(stock):
         ##print(f"📉 AI recommends: SELL {stock}")
         # place_order(stock, "SELL", quantity)
 
-for stock in stocks: #
-    ai_trading(stock) #
+#for stock in stocks: # loop for all stocks price prediction in once
+    #ai_trading(stock) #
 
 print("✅ AI Trading Decisions Executed!")
