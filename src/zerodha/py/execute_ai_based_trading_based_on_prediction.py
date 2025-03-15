@@ -92,9 +92,9 @@ def predictive_ai_trading():
     predicted_price = predict_next_day(df["Close"])
 
     if predicted_price > today_price:
-        place_order("NIFTY", "BUY", 50)
+       # place_order("NIFTY", "BUY", 50)
     else:
-        place_order("NIFTY", "SELL", 50)
+       # place_order("NIFTY", "SELL", 50)
 
     print(f"Today's Price: {today_price}, Predicted: {predicted_price}, Trade Executed!")
 
