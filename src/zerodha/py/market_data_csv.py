@@ -1,13 +1,14 @@
 import pandas as pd
 import datetime as dt
 from kiteconnect import KiteConnect
+import zerodha_login_Automate as zla
 
 # 🔹 Replace with your API credentials
-api_key = "your_api_key"
-access_token = "your_access_token"
-
-kite = KiteConnect(api_key=api_key)
-kite.set_access_token(access_token)
+# api_key = "your_api_key"
+# access_token = "your_access_token"
+kite=zla.kite # #
+# kite = KiteConnect(api_key=api_key)
+# kite.set_access_token(access_token)
 
 # 🔹 Load instruments list from Zerodha CSV (Download latest file from: https://api.kite.trade/instruments)
 instruments_df = pd.read_csv("instruments.csv")  # Ensure this file is downloaded
