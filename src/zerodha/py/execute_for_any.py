@@ -103,15 +103,16 @@ def ai_trading(stock):
         return
 
     today_price = df[df["tradingsymbol"] == stock]["close"].iloc[-1]
-
-    if predicted_price > today_price:
-        print(f"📈 AI recommends: BUY {stock}")
+    return predicted_price ##
+####
+    ##if predicted_price > today_price:
+        ##print(f"📈 AI recommends: BUY {stock}")
         # place_order(stock, "BUY", quantity)
-    else:
-        print(f"📉 AI recommends: SELL {stock}")
+    ##else:
+        ##print(f"📉 AI recommends: SELL {stock}")
         # place_order(stock, "SELL", quantity)
 
-for stock in stocks:
-    ai_trading(stock)
+for stock in stocks: #
+    ai_trading(stock) #
 
 print("✅ AI Trading Decisions Executed!")
