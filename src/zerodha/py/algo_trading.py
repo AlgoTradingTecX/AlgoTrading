@@ -2,6 +2,7 @@ import datetime
 import time
 import pandas as pd
 import zerodha_login_Automate as zla
+from tensorflow.keras.models import load_model
 
 kite=zla.kite # #
 def fetch_historical_data(symbol, interval="5minute", days=7):
