@@ -14,5 +14,9 @@ printf "Manually restart script if needed : "pkill -f algo_trading.py" then type
 
 chmod +x historical_data_csv.py
 python3 historical_data_csv.py
+chmod +x /instrument_csv.perl
+instrument_csv.perl
+chmod +x market_data_csv.py
+python3 market_data_csv.py
 chmod +x execute_ai_based_trading_based_on_prediction.py
 python3 execute_ai_based_trading_based_on_prediction.py
