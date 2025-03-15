@@ -1,13 +1,15 @@
 import pandas as pd
 import datetime as dt
 from kiteconnect import KiteConnect
+import zerodha_login_Automate as zla
 
 # Replace with your API credentials
-api_key = "your_api_key"
-access_token = "your_access_token"
+# # api_key = "your_api_key"
+# # access_token = "your_access_token"
+kite=zla.kite # #
 
-kite = KiteConnect(api_key=api_key)
-kite.set_access_token(access_token)
+# # kite = KiteConnect(api_key=api_key)
+# # kite.set_access_token(access_token)
 
 # 🔹 Instrument Token for the Stock (Example: NIFTY 50)
 instrument_token = 256265  # Change for other stocks
