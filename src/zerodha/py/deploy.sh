@@ -12,6 +12,15 @@ tail -f output.log
 echo "18 9 * * 1-5 pkill -f algo_trading.py && nohup python3 /home/$USER/algo_trading.py > /home/$USER/output.log 2>&1 &"
 printf "Manually restart script if needed : "pkill -f algo_trading.py" then type: "nohup python3 algo_trading.py > output.log 2>&1 &""
 
+chmod +x algo_trading_for_any_stock.py
+crontab -e
+18 9 * * 1-5 pkill -f algo_trading_for_any_stock.py && nohup python3 /workspace/AlgoTrading/src/zerodha/py/algo_trading_for_any_stock.py > /workspace/AlgoTrading/src/zerodha/py/for_any_stock_output.log 2>&1 &
+ps aux | grep algo_trading_for_any_stock.py
+tail -f for_any_stock_output.log
+echo "18 9 * * 1-5 pkill -f algo_trading_for_any_stock.py && nohup python3 /home/$USER/algo_trading_for_any_stock.py > /home/$USER/for_any_stock_output.log 2>&1 &"
+printf "Manually restart script if needed : "pkill -f algo_trading_for_any_stock.py" then type: "nohup python3 algo_trading_for_any_stock.py > for_any_stock_output.log 2>&1 &""
+
+algo_trading_for_any_stock.py
 chmod +x historical_data_csv.py
 python3 historical_data_csv.py
 chmod +x /instrument_csv.perl
