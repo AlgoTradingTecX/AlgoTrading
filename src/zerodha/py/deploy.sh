@@ -1,2 +1,10 @@
 chmod +x zerodha_login_Automate.py
-python zerodha_login_Automate.py
+python3 zerodha_login_Automate.py
+chmod +x algo_trading.py
+./Token_Generate_Request-Manual_Step.perl
+crontab -e
+18 9 * * 1-5 pkill -f algo_trading.py && nohup python3 /workspace/AlgoTrading/src/zerodha/py/algo_trading.py > /workspace/AlgoTrading/src/zerodha/py/output.log 2>&1 &
+ps aux | grep algo_trading.py
+tail -f output.log
+echo "18 9 * * 1-5 pkill -f algo_trading.py && nohup python3 /home/$USER/algo_trading.py > /home/$USER/output.log 2>&1 &"
+printf "Manually restart script if needed : "pkill -f algo_trading.py" then type: "nohup python3 algo_trading.py > output.log 2>&1 &""
